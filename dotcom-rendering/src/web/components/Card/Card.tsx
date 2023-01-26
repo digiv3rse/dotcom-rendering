@@ -58,8 +58,6 @@ export type Props = {
 	showMainVideo?: boolean;
 	kickerText?: string;
 	showPulsingDot?: boolean;
-	/** Sometimes kickers and headlines are separated by a slash */
-	showSlash?: boolean;
 	/** Sometimes kickers and headlines are separated by a linebreak */
 	hideLineBreak?: boolean;
 	starRating?: number;
@@ -233,7 +231,6 @@ export const Card = ({
 	showMainVideo,
 	kickerText,
 	showPulsingDot,
-	showSlash,
 	hideLineBreak,
 	starRating,
 	minWidthInPixels,
@@ -413,10 +410,6 @@ export const Card = ({
 							showPulsingDot={
 								format.design === ArticleDesign.LiveBlog ||
 								showPulsingDot
-							}
-							showSlash={
-								format.design === ArticleDesign.LiveBlog ||
-								showSlash
 							}
 							hideLineBreak={hideLineBreak}
 							byline={byline}

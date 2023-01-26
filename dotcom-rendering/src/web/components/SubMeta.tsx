@@ -156,6 +156,7 @@ export const SubMeta = ({
 	const hasKeywordLinks = subMetaKeywordLinks.length > 0;
 	return (
 		<div
+			id="anna-submeta"
 			data-print-layout="hide"
 			css={
 				format.design === ArticleDesign.Interactive
