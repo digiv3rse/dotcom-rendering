@@ -2019,6 +2019,8 @@ const standfirstTextLight: PaletteFunction = (format) => {
 			return sourcePalette.neutral[100];
 		case ArticleDesign.Picture:
 			return sourcePalette.neutral[86];
+		case ArticleDesign.Gallery:
+			return sourcePalette.neutral[100];
 		default:
 			if (
 				format.theme === ArticleSpecial.SpecialReportAlt &&
