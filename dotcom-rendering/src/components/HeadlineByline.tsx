@@ -3,7 +3,7 @@ import type { ArticleFormat } from '@guardian/libs';
 import { ArticleDesign, ArticleDisplay, ArticleSpecial } from '@guardian/libs';
 import {
 	headline,
-	palette,
+	palette as sourcePalette,
 	space,
 	textSans,
 	until,
@@ -97,7 +97,7 @@ const analysisStyles = css`
 		}
 	}
 	span {
-		color: ${palette.neutral[46]};
+		color: ${sourcePalette.neutral[46]};
 	}
 `;
 
@@ -113,6 +113,10 @@ const immersiveStyles = (format: ArticleFormat) => css`
 				fontWeight: 'light',
 		  })}
 	margin-bottom: ${space[6]}px;
+`;
+
+const galleryStyles = css`
+	color: ${sourcePalette.neutral[100]};
 `;
 
 const immersiveLinkStyles = css`
@@ -152,7 +156,13 @@ export const HeadlineByline = ({ format, byline, tags }: Props) => {
 	switch (format.display) {
 		case ArticleDisplay.Immersive:
 			return (
-				<div css={immersiveStyles(format)}>
+				<div
+					css={[
+						immersiveStyles(format),
+						format.design === ArticleDesign.Gallery &&
+							galleryStyles,
+					]}
+				>
 					by{' '}
 					<span css={immersiveLinkStyles}>
 						<BylineLink
