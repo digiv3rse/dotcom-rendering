@@ -182,6 +182,7 @@
 		"lz-string": "1.5.0",
 		"minimatch": "5.1.6",
 		"mockdate": "3.0.5",
+		"mycrossword": "1.2.4",
 		"parse5": "7.1.2",
 		"postcss-styled-syntax": "0.6.3",
 		"preact": "10.15.1",
