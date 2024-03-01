@@ -1,6 +1,8 @@
 // -------------------------------------
 // Elements
 
+import type { GuardianCrossword } from 'mycrossword';
+
 // -------------------------------------
 interface ThirdPartyEmbeddedContent {
 	isThirdPartyTracking: boolean;
@@ -619,6 +621,12 @@ interface WitnessTypeBlockElement extends ThirdPartyEmbeddedContent {
 		| WitnessTypeDataVideo
 		| WitnessTypeDataText;
 }
+
+export interface CrosswordElement {
+	_type: 'model.dotcomrendering.pageElements.CrosswordElement';
+	crossword: GuardianCrossword;
+}
+
 export type FEElement =
 	| AdPlaceholderBlockElement
 	| AudioAtomBlockElement
@@ -671,7 +679,8 @@ export type FEElement =
 	| VideoYoutubeBlockElement
 	| VineBlockElement
 	| YoutubeBlockElement
-	| WitnessTypeBlockElement;
+	| WitnessTypeBlockElement
+	| CrosswordElement;
 
 // -------------------------------------
 // Misc
