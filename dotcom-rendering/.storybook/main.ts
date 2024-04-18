@@ -82,9 +82,6 @@ const config: StorybookConfig = {
 		name: '@storybook/react-webpack5',
 		options: { fastRefresh: true },
 	},
-	docs: {
-		autodocs: true,
-	},
 };
 
 /** the webpack.Configuration type from Storybook */
