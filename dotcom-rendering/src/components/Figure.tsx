@@ -161,7 +161,14 @@ export const defaultRoleStyles = (
 		case 'immersive':
 			return roleCss.immersive;
 		case 'showcase':
-			if (isTimeline) return roleCss.immersive;
+			if (isTimeline) {
+				return css`
+					${roleCss.immersive}
+					${from.tablet} {
+						${roleCss.showcase}
+					}
+				`;
+			}
 			return roleCss.showcase;
 		case 'thumbnail':
 			switch (format.design) {
