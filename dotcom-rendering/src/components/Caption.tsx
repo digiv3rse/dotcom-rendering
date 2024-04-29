@@ -238,11 +238,13 @@ export const Caption = ({
 				padCaption && captionPadding,
 			]}
 		>
-			{mediaType === 'Video' ? (
+			{format.design === ArticleDesign.Gallery ? null : mediaType ===
+			  'Video' ? (
 				<VideoIcon format={format} />
 			) : (
 				<CameraIcon format={format} />
 			)}
+
 			{!!captionText && (
 				<span
 					css={captionLink}
@@ -252,7 +254,15 @@ export const Caption = ({
 					key="caption"
 				/>
 			)}
-			{!!credit && displayCredit && ` ${credit}`}
+			{!!credit && displayCredit && (
+				<div
+					css={css`
+						padding-top: 6px;
+					`}
+				>
+					{credit}
+				</div>
+			)}
 		</figcaption>
 	);
 
