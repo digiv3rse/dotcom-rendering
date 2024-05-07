@@ -1,12 +1,6 @@
 import { css } from '@emotion/react';
 import { isString } from '@guardian/libs';
-import {
-	between,
-	from,
-	palette,
-	space,
-	until,
-} from '@guardian/source-foundations';
+import { between, from, space, until } from '@guardian/source-foundations';
 import { pageSkinContainer } from '../layouts/lib/pageSkin';
 import { decideContainerOverrides } from '../lib/decideContainerOverrides';
 import type { EditionId } from '../lib/edition';
@@ -618,9 +612,6 @@ export const FrontSection = ({
 					<Treats
 						treats={treats}
 						borderColour={overrides?.border.container}
-						fontColour={
-							overrides?.text.container ?? palette.neutral[7]
-						}
 					/>
 				</div>
 			)}

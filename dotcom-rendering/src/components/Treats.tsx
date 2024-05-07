@@ -20,13 +20,11 @@ const TextTreat = ({
 	linkTo,
 	index,
 	borderColour,
-	fontColour,
 }: {
 	text: string;
 	linkTo: string;
 	index: number;
 	borderColour?: string;
-	fontColour?: string;
 }) => (
 	<li
 		css={css`
@@ -174,11 +172,9 @@ const ImageTreat = ({
 export const Treats = ({
 	treats,
 	borderColour,
-	fontColour,
 }: {
 	treats: TreatType[];
 	borderColour?: string;
-	fontColour?: string;
 }) => {
 	if (treats.length === 0) return null;
 	return (
@@ -208,7 +204,6 @@ export const Treats = ({
 									linkTo={linkTo}
 									index={index}
 									borderColour={borderColour}
-									fontColour={fontColour}
 								/>
 							))}
 						</Fragment>
@@ -245,7 +240,6 @@ export const Treats = ({
 								linkTo={linkTo}
 								index={index}
 								borderColour={borderColour}
-								fontColour={fontColour}
 							/>
 						))}
 					</>
