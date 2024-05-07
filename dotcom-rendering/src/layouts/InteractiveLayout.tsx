@@ -356,6 +356,7 @@ export const InteractiveLayout = (props: WebProps | AppsProps) => {
 											currentNavLink={
 												props.NAV.currentNavLink
 											}
+											position="header"
 										/>
 									</Island>
 								</Section>
@@ -722,9 +723,7 @@ export const InteractiveLayout = (props: WebProps | AppsProps) => {
 						padSides={false}
 						showTopBorder={false}
 						showSideBorders={false}
-						backgroundColour={themePalette(
-							'--article-section-background',
-						)}
+						backgroundColour={sourcePalette.neutral[97]}
 						element="aside"
 					>
 						<AdSlot
@@ -846,9 +845,7 @@ export const InteractiveLayout = (props: WebProps | AppsProps) => {
 						padSides={false}
 						showTopBorder={false}
 						showSideBorders={false}
-						backgroundColour={themePalette(
-							'--article-section-background',
-						)}
+						backgroundColour={sourcePalette.neutral[97]}
 						element="aside"
 					>
 						<AdSlot
@@ -870,6 +867,7 @@ export const InteractiveLayout = (props: WebProps | AppsProps) => {
 						<SubNav
 							subNavSections={props.NAV.subNavSections}
 							currentNavLink={props.NAV.currentNavLink}
+							position="footer"
 						/>
 					</Island>
 				</Section>

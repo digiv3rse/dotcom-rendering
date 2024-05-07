@@ -408,6 +408,7 @@ export const CommentLayout = (props: WebProps | AppsProps) => {
 										currentNavLink={
 											props.NAV.currentNavLink
 										}
+										position="footer"
 									/>
 								</Island>
 							</Section>
@@ -791,9 +792,7 @@ export const CommentLayout = (props: WebProps | AppsProps) => {
 						padSides={false}
 						showTopBorder={false}
 						showSideBorders={false}
-						backgroundColour={themePalette(
-							'--article-section-background',
-						)}
+						backgroundColour={sourcePalette.neutral[97]}
 						element="aside"
 					>
 						<AdSlot
@@ -911,9 +910,7 @@ export const CommentLayout = (props: WebProps | AppsProps) => {
 						padSides={false}
 						showTopBorder={false}
 						showSideBorders={false}
-						backgroundColour={themePalette(
-							'--article-section-background',
-						)}
+						backgroundColour={sourcePalette.neutral[97]}
 						element="aside"
 					>
 						<AdSlot
@@ -930,6 +927,7 @@ export const CommentLayout = (props: WebProps | AppsProps) => {
 						<SubNav
 							subNavSections={props.NAV.subNavSections}
 							currentNavLink={props.NAV.currentNavLink}
+							position="footer"
 						/>
 					</Island>
 				</Section>

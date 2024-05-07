@@ -44,7 +44,6 @@ import {
 } from '../lib/getFrontsAdPositions';
 import { hideAge } from '../lib/hideAge';
 import type { NavType } from '../model/extract-nav';
-import { palette } from '../palette';
 import type { DCRCollectionType, DCRFrontType } from '../types/front';
 import { pageSkinContainer } from './lib/pageSkin';
 import { BannerWrapper, Stuck } from './lib/stickiness';
@@ -170,9 +169,6 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 								showSideBorders={false}
 								padSides={false}
 								shouldCenter={false}
-								backgroundColour={palette(
-									'--article-section-background',
-								)}
 							>
 								<HeaderAdSlot
 									isPaidContent={!!front.config.isPaidContent}
@@ -252,10 +248,6 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 								padSides={false}
 								element="aside"
 								hasPageSkin={hasPageSkin}
-								backgroundColour={palette(
-									'--article-background',
-								)}
-								borderColour={palette('--article-border')}
 							>
 								<Island
 									priority="enhancement"
@@ -264,6 +256,7 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 									<SubNav
 										subNavSections={NAV.subNavSections}
 										currentNavLink={NAV.currentNavLink}
+										position="header"
 									/>
 								</Island>
 							</Section>
@@ -272,17 +265,12 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 								padSides={false}
 								showTopBorder={false}
 								hasPageSkin={hasPageSkin}
-								backgroundColour={palette(
-									'--article-background',
-								)}
-								borderColour={palette('--article-border')}
 							>
 								<StraightLines
 									cssOverrides={css`
 										display: block;
 									`}
 									count={4}
-									color={palette('--article-border')}
 								/>
 							</Section>
 						</>
@@ -363,12 +351,6 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 													collection.collectionType
 												}
 												hasPageSkin={hasPageSkin}
-												backgroundColour={palette(
-													'--article-background',
-												)}
-												borderColour={palette(
-													'--article-border',
-												)}
 											>
 												<Snap
 													snapData={trail.snapData}
@@ -559,9 +541,6 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 									innerBackgroundColour={
 										containerOverrides.background.container
 									}
-									borderColour={
-										containerOverrides.border.container
-									}
 									hasPageSkin={hasPageSkin}
 								>
 									<Island
@@ -705,6 +684,7 @@ export const FrontLayout = ({ front, NAV }: Props) => {
 						<SubNav
 							subNavSections={NAV.subNavSections}
 							currentNavLink={NAV.currentNavLink}
+							position="footer"
 						/>
 					</Island>
 				</Section>
