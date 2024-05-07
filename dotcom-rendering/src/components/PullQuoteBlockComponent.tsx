@@ -15,6 +15,10 @@ import { QuoteIcon } from './QuoteIcon';
 
 const pullQuoteCss = css`
 	color: ${palette('--pullquote-text')};
+	hyphens: none;
+	${until.mobileLandscape} {
+		hyphens: manual;
+	}
 `;
 
 const fontCss = (role: string, format: ArticleFormat) => {
