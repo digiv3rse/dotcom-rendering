@@ -446,6 +446,7 @@ export const StandardLayout = (props: WebProps | AppProps) => {
 								article.nav.readerRevenueLinks.header.subscribe
 							}
 							idApiUrl={article.config.idApiUrl}
+							contributionsServiceUrl={contributionsServiceUrl}
 							showSubNav={!isPaidContent}
 							hasPageSkinContentSelfConstrain={true}
 						/>

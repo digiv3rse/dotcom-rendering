@@ -352,6 +352,7 @@ export const LiveLayout = (props: WebProps | AppsProps) => {
 							}
 							discussionApiUrl={article.config.discussionApiUrl}
 							idApiUrl={article.config.idApiUrl}
+							contributionsServiceUrl={contributionsServiceUrl}
 							showSubNav={false}
 							isImmersive={false}
 							displayRoundel={false}

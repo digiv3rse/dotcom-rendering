@@ -109,6 +109,7 @@ export const TagPageLayout = ({ tagPage, NAV }: Props) => {
 							}
 							discussionApiUrl={tagPage.config.discussionApiUrl}
 							idApiUrl={tagPage.config.idApiUrl}
+							contributionsServiceUrl="https://contributions.guardianapis.com" // TODO: Pass this in
 							showSubNav={false}
 							isImmersive={false}
 							displayRoundel={false}
