@@ -2348,8 +2348,8 @@ const cardBorderTopLight: PaletteFunction = ({ theme, design }) => {
 	}
 };
 
-const cardBorderTopDark = (): string => {
-	return sourcePalette.neutral[20];
+const cardBorderTopDark: PaletteFunction = (format): string => {
+	return cardBorderTopLight(format);
 };
 const cardAgeTextLight: PaletteFunction = (format) => {
 	if (format.theme === ArticleSpecial.SpecialReportAlt) {
@@ -5469,6 +5469,14 @@ type PaletteColours = Record<
 const paletteColours = {
 	...expandingWrapper,
 	...tabs,
+	'--ad-slot-background': {
+		light: () => sourcePalette.neutral[97],
+		dark: () => sourcePalette.neutral[0],
+	},
+	'--ad-slot-border': {
+		light: () => sourcePalette.neutral[86],
+		dark: () => sourcePalette.neutral[20],
+	},
 	'--tabs-input': {
 		light: () => sourcePalette.neutral[100],
 		dark: () => sourcePalette.neutral[0],
