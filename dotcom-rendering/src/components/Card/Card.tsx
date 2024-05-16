@@ -53,6 +53,7 @@ import type {
 } from './components/ImageWrapper';
 import { ImageWrapper } from './components/ImageWrapper';
 import { TrailTextWrapper } from './components/TrailTextWrapper';
+import { UKLocalElectionTracker } from '../UKLocalElectionTracker';
 
 export type Props = {
 	linkTo: string;
@@ -105,6 +106,7 @@ export type Props = {
 	onwardsSource?: OnwardsSource;
 	pauseOffscreenVideo?: boolean;
 	showMainVideo?: boolean;
+	embedUri?: string;
 };
 
 const starWrapper = (cardHasImage: boolean) => css`
@@ -289,6 +291,7 @@ export const Card = ({
 	onwardsSource,
 	pauseOffscreenVideo = false,
 	showMainVideo = true,
+	embedUri,
 }: Props) => {
 	const palette = decidePalette(format, containerPalette);
 
@@ -376,6 +379,13 @@ export const Card = ({
 			/>
 		);
 	};
+
+	if (
+		embedUri ===
+		'https://content.guardianapis.com/atom/interactive/interactives/2024/04/local-elections-tracker/local-elections-tracker-2024'
+	) {
+		return <UKLocalElectionTracker />;
+	}
 
 	if (snapData?.embedHtml) {
 		return (
