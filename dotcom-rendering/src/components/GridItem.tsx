@@ -35,6 +35,15 @@ const gridAreaStyles = (area: string) => {
 		`;
 	}
 
+	// TODO:: Pass knowledge of the test variant here
+	if (area === 'title') {
+		return css`
+			grid-area: ${area};
+			z-index: 1000;
+			position: sticky;
+			top: 0;
+		`;
+	}
 	return css`
 		grid-area: ${area};
 	`;
