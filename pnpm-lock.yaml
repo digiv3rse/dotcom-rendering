@@ -543,8 +543,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4)
       '@types/webpack-env':
-        specifier: 1.18.4
-        version: 1.18.4
+        specifier: 1.18.5
+        version: 1.18.5
       '@types/webpack-node-externals':
         specifier: 3.0.4
         version: 3.0.4(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4)
@@ -4152,7 +4152,7 @@ packages:
       '@typescript-eslint/parser': 6.18.0(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)
       tslib: 2.6.2
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -8134,8 +8134,8 @@ packages:
       - webpack-cli
     dev: false
 
-  /@types/webpack-env@1.18.4:
-    resolution: {integrity: sha512-I6e+9+HtWADAWeeJWDFQtdk4EVSAbj6Rtz4q8fJ7mSr1M0jzlFcs8/HZ+Xb5SHzVm1dxH7aUiI+A8kA8Gcrm0A==}
+  /@types/webpack-env@1.18.5:
+    resolution: {integrity: sha512-wz7kjjRRj8/Lty4B+Kr0LN6Ypc/3SymeCCGSbaXp2leH0ZVg/PriNiOwNj4bD4uphI7A8NXS4b6Gl373sfO5mA==}
     dev: false
 
   /@types/webpack-node-externals@3.0.4(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4):
@@ -11484,7 +11484,7 @@ packages:
       enhanced-resolve: 5.16.0
       eslint: 8.56.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
       is-core-module: 2.13.1
