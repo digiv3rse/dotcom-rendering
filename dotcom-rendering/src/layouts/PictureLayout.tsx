@@ -493,10 +493,6 @@ export const PictureLayout = (props: WebProps | AppsProps) => {
 											webPublicationDateDeprecated={
 												article.webPublicationDateDeprecated
 											}
-											hasStarRating={
-												typeof article.starRating ===
-												'number'
-											}
 											hasAvatar={displayAvatarUrl}
 										/>
 									</div>
@@ -534,9 +530,6 @@ export const PictureLayout = (props: WebProps | AppsProps) => {
 										byline={article.byline}
 										webPublicationDateDeprecated={
 											article.webPublicationDateDeprecated
-										}
-										hasStarRating={
-											article.starRating !== undefined
 										}
 									/>
 								</div>

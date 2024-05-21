@@ -594,9 +594,6 @@ export const ShowcaseLayout = (props: WebProps | AppsProps) => {
 									webPublicationDateDeprecated={
 										article.webPublicationDateDeprecated
 									}
-									hasStarRating={
-										article.starRating !== undefined
-									}
 								/>
 							</PositionHeadline>
 						</GridItem>

@@ -2,15 +2,13 @@ import { css } from '@emotion/react';
 import { ArticleDesign, ArticleDisplay, ArticleSpecial } from '@guardian/libs';
 import {
 	from,
-	headlineBold17,
-	headlineBold20,
-	headlineLight20,
-	headlineLight24,
 	headlineMedium17,
+	headlineMedium20,
+	headlineMedium24,
 	space,
-	textSans,
 	textSans17,
 	textSans20,
+	textSans24,
 } from '@guardian/source-foundations';
 import sanitise from 'sanitize-html';
 import { interactiveLegacyClasses } from '../layouts/lib/interactiveLegacyStyling';
@@ -71,36 +69,152 @@ const nestedStyles = (format: ArticleFormat) => {
 	`;
 };
 
+const decideFont = ({ display, design, theme }: ArticleFormat) => {
+	const isLabs = theme === ArticleSpecial.Labs;
+	switch (design) {
+		case ArticleDesign.Obituary:
+		case ArticleDesign.Comment:
+		case ArticleDesign.Editorial: {
+			switch (display) {
+				case ArticleDisplay.Immersive:
+					if (isLabs) {
+						return css`
+							${textSans20};
+							${from.tablet} {
+								${textSans24};
+							}
+						`;
+					}
+					return css`
+						${headlineMedium20};
+						${from.tablet} {
+							${headlineMedium24};
+						}
+					`;
+				case ArticleDisplay.Showcase:
+				default: {
+					if (isLabs) {
+						return css`
+							${textSans17};
+							${from.tablet} {
+								${textSans20};
+							}
+						`;
+					}
+					return css`
+						${headlineMedium17};
+						${from.tablet} {
+							${headlineMedium20};
+						}
+					`;
+				}
+			}
+		}
+		default: {
+			switch (display) {
+				case ArticleDisplay.Immersive: {
+					if (isLabs) {
+						return css`
+							${textSans20};
+							${from.tablet} {
+								${textSans24};
+							}
+						`;
+					}
+					return css`
+						${headlineMedium20};
+						${from.tablet} {
+							${headlineMedium24};
+						}
+					`;
+				}
+				case ArticleDisplay.Showcase:
+				default: {
+					if (isLabs) {
+						return css`
+							${textSans17};
+							${from.tablet} {
+								${textSans20};
+							}
+						`;
+					}
+					return css`
+						${headlineMedium17};
+
+						${from.tablet} {
+							${headlineMedium20};
+						}
+					`;
+				}
+			}
+		}
+	}
+};
+
+const decidePadding = ({ display, design }: ArticleFormat) => {
+	switch (design) {
+		case ArticleDesign.Obituary:
+		case ArticleDesign.Comment:
+		case ArticleDesign.Editorial: {
+			switch (display) {
+				case ArticleDisplay.Immersive:
+					return css`
+						padding-bottom: ${space[6]}px;
+						padding-top: ${space[2]}px;
+						${from.tablet} {
+							padding-bottom: none;
+						}
+					`;
+				case ArticleDisplay.Showcase:
+				default:
+					return css`
+						padding-bottom: 12px;
+						${from.tablet} {
+							padding-bottom: ${space[2]}px;
+						}
+					`;
+			}
+		}
+		default: {
+			switch (display) {
+				case ArticleDisplay.Showcase:
+					return css`
+						padding-bottom: ${space[2]}px;
+
+						${from.tablet} {
+							padding-bottom: 14px;
+						}
+					`;
+				case ArticleDisplay.Immersive:
+					return css`
+						padding-bottom: ${space[6]}px;
+						padding-top: ${space[2]}px;
+
+						${from.tablet} {
+							padding-bottom: none;
+						}
+					`;
+				default:
+					return css`
+						padding-bottom: ${space[2]}px;
+					`;
+			}
+		}
+	}
+};
+
 const standfirstStyles = ({ display, design, theme }: ArticleFormat) => {
 	switch (display) {
 		case ArticleDisplay.Immersive:
 			switch (design) {
 				case ArticleDesign.PhotoEssay:
-					if (theme === ArticleSpecial.Labs) {
-						return css`
-							${textSans20};
-							margin-top: ${space[2]}px;
-							margin-bottom: ${space[3]}px;
-							line-height: 22px;
-							max-width: 540px;
-							color: ${palette('--standfirst-text')};
-						`;
-					}
 					return css`
-						${headlineMedium17};
-						margin-top: ${space[2]}px;
-						margin-bottom: ${space[3]}px;
 						line-height: 22px;
 						max-width: 540px;
 						color: ${palette('--standfirst-text')};
 					`;
 				default:
 					return css`
-						${theme === ArticleSpecial.Labs
-							? textSans17
-							: headlineLight24};
-						padding-top: ${space[4]}px;
-
 						max-width: 280px;
 						${from.tablet} {
 							max-width: 460px;
@@ -115,8 +229,6 @@ const standfirstStyles = ({ display, design, theme }: ArticleFormat) => {
 
 		case ArticleDisplay.NumberedList:
 			return css`
-				${headlineBold20};
-				margin-bottom: ${space[3]}px;
 				max-width: 540px;
 				color: ${palette('--standfirst-text')};
 			`;
@@ -136,8 +248,6 @@ const standfirstStyles = ({ display, design, theme }: ArticleFormat) => {
 				case ArticleDesign.Timeline:
 				case ArticleDesign.Profile:
 					return css`
-						${headlineLight20};
-						margin-bottom: ${space[3]}px;
 						max-width: 540px;
 						color: ${palette('--standfirst-text')};
 						li:before {
@@ -148,32 +258,24 @@ const standfirstStyles = ({ display, design, theme }: ArticleFormat) => {
 				case ArticleDesign.LiveBlog:
 				case ArticleDesign.DeadBlog:
 					return css`
-						${headlineBold17};
 						margin-top: ${space[1]}px;
-						margin-bottom: ${space[3]}px;
 						max-width: 540px;
 						color: ${palette('--standfirst-text')};
 					`;
 				case ArticleDesign.Analysis:
 					return css`
-						${headlineMedium17};
-						margin-bottom: ${space[3]}px;
 						max-width: 540px;
 						color: ${palette('--standfirst-text')};
 					`;
 				case ArticleDesign.Video:
 				case ArticleDesign.Audio:
 					return css`
-						${headlineBold17};
-						margin-bottom: ${space[3]}px;
 						color: ${palette('--standfirst-text')};
 					`;
 				default:
 					switch (theme) {
 						case ArticleSpecial.Labs:
 							return css`
-								${textSans.medium({ lineHeight: 'tight' })}
-								margin-bottom: ${space[3]}px;
 								max-width: 540px;
 								color: ${palette('--standfirst-text')};
 								a {
@@ -184,8 +286,6 @@ const standfirstStyles = ({ display, design, theme }: ArticleFormat) => {
 							`;
 						default:
 							return css`
-								${headlineBold17};
-								margin-bottom: ${space[3]}px;
 								max-width: 540px;
 								color: ${palette('--standfirst-text')};
 							`;
@@ -202,12 +302,15 @@ const hoverStyles = css`
 `;
 
 export const Standfirst = ({ format, standfirst }: Props) => {
+	if (standfirst.trim() === '') return null;
 	return (
 		<>
 			<div
 				css={[
 					nestedStyles(format),
 					standfirstStyles(format),
+					decideFont(format),
+					decidePadding(format),
 					hoverStyles,
 				]}
 				className={

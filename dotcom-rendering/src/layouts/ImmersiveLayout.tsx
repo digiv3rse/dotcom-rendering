@@ -448,9 +448,6 @@ export const ImmersiveLayout = (props: WebProps | AppProps) => {
 										webPublicationDateDeprecated={
 											article.webPublicationDateDeprecated
 										}
-										hasStarRating={
-											article.starRating !== undefined
-										}
 									/>
 								</Section>
 							</Box>
@@ -535,10 +532,6 @@ export const ImmersiveLayout = (props: WebProps | AppProps) => {
 											byline={article.byline}
 											webPublicationDateDeprecated={
 												article.webPublicationDateDeprecated
-											}
-											hasStarRating={
-												typeof article.starRating ===
-												'number'
 											}
 										/>
 									</div>
