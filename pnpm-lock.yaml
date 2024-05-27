@@ -333,8 +333,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0
       '@guardian/browserslist-config':
-        specifier: 6.1.0
-        version: 6.1.0(browserslist@4.23.0)(tslib@2.6.2)
+        specifier: 6.1.1
+        version: 6.1.1(browserslist@4.23.0)(tslib@2.6.2)
       '@guardian/cdk':
         specifier: 50.13.0
         version: 50.13.0(@swc/core@1.5.7)(@types/node@20.12.7)(aws-cdk-lib@2.100.0)(aws-cdk@2.100.0)(constructs@10.3.0)(typescript@5.3.3)
@@ -4343,8 +4343,8 @@ packages:
     resolution: {integrity: sha512-aiRVLDF/UfNYeoF10ptBDs52Fv1T4sd19uKACTZSr1uMgV2BPmzG+/BiVLi8Q9/6gjS+CTP3Covz62liksAFuQ==}
     dev: false
 
-  /@guardian/browserslist-config@6.1.0(browserslist@4.23.0)(tslib@2.6.2):
-    resolution: {integrity: sha512-qM0QxAv6E5IHXny5Okli6AZXEio0mpXzzEzz38qrb4IwO91R6eWVKyihdj0qW2k7TVxMFVOSfNmBZ1H5EiJhgw==}
+  /@guardian/browserslist-config@6.1.1(browserslist@4.23.0)(tslib@2.6.2):
+    resolution: {integrity: sha512-62fVcqE5opXxN1bgm5lF6ykPrKM2/U8WdGH7gcrFGV6f5VVz+oFloMX+C2Svj19fdmXpfHj6+I1AmJbqSAX5CQ==}
     peerDependencies:
       browserslist: ^4.22.2
       tslib: ^2.6.2
