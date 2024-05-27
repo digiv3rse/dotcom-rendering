@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_guardian_dotcom_rendering=self.webpackChunk_guardian_dotcom_rendering||[]).push([[8762],{8362:(n,e,r)=>{r.r(e),r.d(e,{discussion:()=>a});var c=r(7076),i=r(8678),o=r(222),a=function(){return window.location.hash.includes("comment")&&function(){try{var n="DiscussionContainer",e=document.querySelector("gu-island[name=".concat(n,"]"));if(!e)return;var r=(0,o.A)(e);r.expanded=!0,(0,c.$)(n,r,e,(0,i.E)())}catch(n){}}(),Promise.resolve()}}}]);
+//# sourceMappingURL=discussion.legacy.538d4dcf12473c5809a7.js.map

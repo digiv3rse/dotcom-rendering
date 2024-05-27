@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunk_guardian_dotcom_rendering=self.webpackChunk_guardian_dotcom_rendering||[]).push([[6068],{181:(e,t,a)=>{a.r(t),a.d(t,{AnimatePulsingDots:()=>n});var r=a(9103),s=a(3904);const n=()=>((0,s.useEffect)((()=>{!1!==r.t.local.get("gu.prefs.accessibility.flashing-elements")&&document.querySelectorAll('[data-flashing-dot-hydrated="false"]').forEach((e=>{e.setAttribute("data-flashing-dot-hydrated","true"),e.setAttribute("data-animate","true")}))})),null)}}]);
+//# sourceMappingURL=AnimatePulsingDots-importable.modern.e94f65b7a2c59a06cba6.js.map
