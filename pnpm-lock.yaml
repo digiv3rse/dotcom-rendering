@@ -543,8 +543,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4)
       '@types/webpack-env':
-        specifier: 1.18.4
-        version: 1.18.4
+        specifier: 1.18.5
+        version: 1.18.5
       '@types/webpack-node-externals':
         specifier: 3.0.4
         version: 3.0.4(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4)
@@ -603,8 +603,8 @@ importers:
         specifier: 11.0.0
         version: 11.0.0
       css-loader:
-        specifier: 7.1.1
-        version: 7.1.1(webpack@5.91.0)
+        specifier: 7.1.2
+        version: 7.1.2(webpack@5.91.0)
       csstype:
         specifier: 3.1.1
         version: 3.1.1
@@ -8858,8 +8858,8 @@ packages:
       - webpack-cli
     dev: false
 
-  /@types/webpack-env@1.18.4:
-    resolution: {integrity: sha512-I6e+9+HtWADAWeeJWDFQtdk4EVSAbj6Rtz4q8fJ7mSr1M0jzlFcs8/HZ+Xb5SHzVm1dxH7aUiI+A8kA8Gcrm0A==}
+  /@types/webpack-env@1.18.5:
+    resolution: {integrity: sha512-wz7kjjRRj8/Lty4B+Kr0LN6Ypc/3SymeCCGSbaXp2leH0ZVg/PriNiOwNj4bD4uphI7A8NXS4b6Gl373sfO5mA==}
     dev: false
 
   /@types/webpack-node-externals@3.0.4(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4):
@@ -11168,8 +11168,8 @@ packages:
       webpack: 5.91.0(@swc/core@1.5.3)(esbuild@0.18.20)(webpack-cli@5.1.4)
     dev: false
 
-  /css-loader@7.1.1(webpack@5.91.0):
-    resolution: {integrity: sha512-OxIR5P2mjO1PSXk44bWuQ8XtMK4dpEqpIyERCx3ewOo3I8EmbcxMPUc5ScLtQfgXtOojoMv57So4V/C02HQLsw==}
+  /css-loader@7.1.2(webpack@5.91.0):
+    resolution: {integrity: sha512-6WvYYn7l/XEGN8Xu2vWFt9nVzrCn39vKyTEFf/ExEyoksJjjSZV/0/35XPlMbpnr6VGhZIUg5yJrL8tGfes/FA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
