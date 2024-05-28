@@ -459,8 +459,8 @@ importers:
         specifier: 1.7.2
         version: 1.7.2
       '@types/connect':
-        specifier: 3.4.35
-        version: 3.4.35
+        specifier: 3.4.38
+        version: 3.4.38
       '@types/dompurify':
         specifier: 3.0.2
         version: 3.0.2
@@ -8302,7 +8302,7 @@ packages:
   /@types/body-parser@1.19.2:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
-      '@types/connect': 3.4.35
+      '@types/connect': 3.4.38
       '@types/node': 20.12.7
     dev: false
 
@@ -8351,8 +8351,8 @@ packages:
       '@types/node': 20.12.7
     dev: false
 
-  /@types/connect@3.4.35:
-    resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
+  /@types/connect@3.4.38:
+    resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
     dependencies:
       '@types/node': 20.12.7
     dev: false
