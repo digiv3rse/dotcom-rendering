@@ -379,7 +379,7 @@ importers:
         version: 19.0.0(@emotion/react@11.11.1)(@guardian/libs@16.1.0)(@guardian/source-foundations@14.2.2)(@guardian/source-react-components@22.1.0)(react@18.3.1)(tslib@2.6.2)(typescript@5.3.3)
       '@guardian/support-dotcom-components':
         specifier: 2.2.1
-        version: 2.2.1(zod@3.22.3)
+        version: 2.2.1(zod@3.23.8)
       '@guardian/tsconfig':
         specifier: 0.2.0
         version: 0.2.0
@@ -879,8 +879,8 @@ importers:
         specifier: 3.2.3
         version: 3.2.3
       zod:
-        specifier: 3.22.3
-        version: 3.22.3
+        specifier: 3.23.8
+        version: 3.23.8
 
 packages:
 
@@ -4773,12 +4773,12 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@guardian/support-dotcom-components@2.2.1(zod@3.22.3):
+  /@guardian/support-dotcom-components@2.2.1(zod@3.23.8):
     resolution: {integrity: sha512-YCdFFJAVr0X4juHdO4EOUVjFIRDeVYou6eknpbZy4UYVxR3K1w/P7l3ITLToNhwlgQ6JqOLeZK5VSqzhhSksHA==}
     peerDependencies:
       zod: ^3.22.4
     dependencies:
-      zod: 3.22.3
+      zod: 3.23.8
     dev: false
 
   /@guardian/tsconfig@0.2.0:
@@ -20948,8 +20948,8 @@ packages:
     engines: {node: '>=12.20'}
     dev: false
 
-  /zod@3.22.3:
-    resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
+  /zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
     dev: false
 
   /zwitch@2.0.4:
