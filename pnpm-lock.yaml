@@ -600,8 +600,8 @@ importers:
         specifier: 10.3.0
         version: 10.3.0
       cpy:
-        specifier: 11.0.0
-        version: 11.0.0
+        specifier: 11.0.1
+        version: 11.0.1
       css-loader:
         specifier: 7.1.2
         version: 7.1.2(webpack@5.91.0)
@@ -11056,8 +11056,8 @@ packages:
       typescript: 5.3.3
     dev: false
 
-  /cpy@11.0.0:
-    resolution: {integrity: sha512-vA71mFQyIxCrqvP/9JBLCj05UJV/+WpvAxZK2/EiK5ndD090cjuChfJ3ExVVuZXHoTJ/3HLedOPYDWyxnNHjrg==}
+  /cpy@11.0.1:
+    resolution: {integrity: sha512-VIvf1QNOHnIZ5QT8zWxNJq+YYIpbFhgeMwnVngX+AhhUQd3Rns3x6gcvb0fGpNxZQ0q629mX6+GvDtvbO/Hutg==}
     engines: {node: '>=18'}
     dependencies:
       copy-file: 11.0.0
