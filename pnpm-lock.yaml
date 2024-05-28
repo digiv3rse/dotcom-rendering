@@ -447,8 +447,8 @@ importers:
         specifier: 14.5.2
         version: 14.5.2(@testing-library/dom@10.1.0)
       '@types/amphtml-validator':
-        specifier: 1.0.1
-        version: 1.0.1
+        specifier: 1.0.4
+        version: 1.0.4
       '@types/body-parser':
         specifier: 1.19.2
         version: 1.19.2
@@ -558,8 +558,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1(ajv@8.12.0)
       amphtml-validator:
-        specifier: 1.0.35
-        version: 1.0.35
+        specifier: 1.0.38
+        version: 1.0.38
       aws-cdk:
         specifier: 2.100.0
         version: 2.100.0
@@ -8260,8 +8260,8 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: false
 
-  /@types/amphtml-validator@1.0.1:
-    resolution: {integrity: sha512-DWE7fy6KtC+Uw0KV/HAmjuH2GB/o8yskXlvmVWR7mOVsLDybp+XrwkzEeRFU9wGjWKeRMBNGsx+5DRq7sUsAwA==}
+  /@types/amphtml-validator@1.0.4:
+    resolution: {integrity: sha512-rmXCaF4sDVh8zDny5mbMxZntDBXwa9jcBwWqEVRrxP+JIjMuEDlO3P5aLKGOXf5XSs4MoUh+RmmdvmTZSN5IIA==}
     dependencies:
       '@types/node': 20.12.7
     dev: false
@@ -9693,13 +9693,13 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /amphtml-validator@1.0.35:
-    resolution: {integrity: sha512-C67JzC5EI6pE2C0sAo/zuCp8ARDl1Vtt6/s0nr+3NuXDNOdkjclZUkaNAd/ZnsEvvYodkXZ6T/uww890IQh9dQ==}
+  /amphtml-validator@1.0.38:
+    resolution: {integrity: sha512-TqGeHVRUEsMiJoaRvMhzZBv8oljLhhJgzkaPX/zT2eJFG5FLeaMehd6riNwsuMmi9e/5xsI0pocbTgN/u2sonQ==}
     hasBin: true
     dependencies:
       colors: 1.4.0
-      commander: 7.2.0
-      promise: 8.1.0
+      commander: 12.0.0
+      promise: 8.3.0
     dev: false
 
   /ansi-colors@4.1.3:
@@ -10858,6 +10858,11 @@ packages:
   /commander@11.1.0:
     resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
+    dev: false
+
+  /commander@12.0.0:
+    resolution: {integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==}
+    engines: {node: '>=18'}
     dev: false
 
   /commander@2.20.3:
@@ -17369,8 +17374,8 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: false
 
-  /promise@8.1.0:
-    resolution: {integrity: sha512-W04AqnILOL/sPRXziNicCjSNRruLAuIHEOVBazepu0545DDNGYHz7ar9ZgZ1fMU8/MA4mVxp5rkBWRi6OXIy3Q==}
+  /promise@8.3.0:
+    resolution: {integrity: sha512-rZPNPKTOYVNEEKFaq1HqTgOwZD+4/YHS5ukLzQCypkj+OkYx7iv0mA91lJlpPPZ8vMau3IIGj5Qlwrx+8iiSmg==}
     dependencies:
       asap: 2.0.6
     dev: false
